@@ -1,0 +1,5 @@
+runpod
+audiocraft
+numpy
+scipy
+networkx
