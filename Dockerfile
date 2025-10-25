@@ -4,6 +4,11 @@ FROM runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04
 # Set the working directory
 WORKDIR /app
 
+# ✅ NEW: Install git (required for audiocraft and other packages)
+RUN apt-get update && apt-get install -y \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
 # Copy your project files
 COPY . /app
 
