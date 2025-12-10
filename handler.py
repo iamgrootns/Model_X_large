@@ -7,6 +7,7 @@ from io import BytesIO
 import numpy as np
 from scipy.io import wavfile
 from scipy import signal
+import traceback
 import requests  # ✅ ADD THIS IMPORT
 import urllib.parse
 
@@ -165,4 +166,5 @@ def handler(event):
 
 # --- Start Serverless Worker ---
 runpod.serverless.start({"handler": handler})
+
 
